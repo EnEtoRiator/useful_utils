@@ -8,6 +8,7 @@ class DragableLabel(tk.Label):
 # replace any widget from tkinter library for make it dragable
     
     def __init__(self, master, text, **kwargs):
+        # and don't forget about `__init__()` args and get them into  `super()`
         super().__init__(master, text=text, **kwargs)
         
         self.bind('<ButtonPress-1>', self.on_drag_start)
